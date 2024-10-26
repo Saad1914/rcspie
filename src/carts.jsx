@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Mealinfo from './mealinfo'
+
 
 const Carts = ({detail}) => {
 
@@ -11,14 +11,14 @@ const Carts = ({detail}) => {
       detail.map((index) => (
         <div key={index.idMeal} className='bg-white shadow-lg rounded-lg p-4 flex flex-col items-center'>
           <img className='h-[150px] w-full object-cover rounded-md mb-4' src={index.strMealThumb} alt="Meal" />
-          <p className='text-center font-semibold mb-2'>{index.strMeal}</p>
+          <p className='text-center font-semibold mb-2 text-black'>{index.strMeal}</p>
 
           <NavLink to={`/${index.idMeal}`} ><button className='px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition'>Recipe</button></NavLink>
 
         </div>
       ))
     ) : (
-      <div className='col-span-full text-center  text-white'>No items found.</div>
+      <div className='col-span-full text-center  text-black'>No items found.</div>
     )}
   </div>
   
